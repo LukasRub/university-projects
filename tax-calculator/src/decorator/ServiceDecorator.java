@@ -19,4 +19,8 @@ public abstract class ServiceDecorator implements Service {
         return service.getCost();
     }
 
+    public String toString() {
+        return String.format("%s\n\t\tGRAND TOTAL: %.2f\n", getDescription(), getCost());
+    }
+
 }

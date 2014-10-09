@@ -21,7 +21,7 @@ public class ShippingService extends ServiceDecorator {
         if (this.productWeight <= 0) {
             throw new RuntimeException("Product weight below zero");
         }
-        else if (this.productWeight >= 20) {
+        else if (this.productWeight > 20) {
             throw new RuntimeException("We don't ship products heavier than 20 kgs");
         }
         else {

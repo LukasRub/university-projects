@@ -1,4 +1,5 @@
 package decorator;
+import singleton.*;
 
 /**
  * Created by Lukas Rubikas on 14.10.8.
@@ -20,6 +21,8 @@ public class ProductService implements Service {
 
     @Override
     public double getCost() {
-        return this.productPrice;
+        System.out.println(CurrencyExchangeSingleton.getInstance().getCurrencyExchangeRate());
+        return this.productPrice * CurrencyExchangeSingleton.getInstance().getCurrencyExchangeRate();
     }
+
 }

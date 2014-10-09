@@ -1,4 +1,5 @@
 package decorator;
+import singleton.*;
 
 import com.company.ProductSize;
 
@@ -43,6 +44,7 @@ public class PackingService extends ServiceDecorator {
 
         }
 
+        packageCost *= CurrencyExchangeSingleton.getInstance().getCurrencyExchangeRate();
         return service.getCost() + packageCost;
     }
 }
