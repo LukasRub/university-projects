@@ -1,7 +1,5 @@
 package decorator;
 
-import com.company.ProductSize;
-
 /**
  * Created by Lukas Rubikas on 14.10.8.
  */

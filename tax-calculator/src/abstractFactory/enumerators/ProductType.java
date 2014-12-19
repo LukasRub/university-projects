@@ -6,6 +6,8 @@ package abstractFactory.enumerators;
 public enum ProductType {
     MOVIE,
     GAME,
+    MUSIC,
     PHOTO,
-    COMPUTER
+    COMPUTER,
+    AUDIO
 }

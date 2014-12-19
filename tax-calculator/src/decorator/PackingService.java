@@ -1,7 +1,7 @@
 package decorator;
 import singleton.*;
 
-import com.company.ProductSize;
+import abstractFactory.enumerators.ProductSize;
 
 /**
  * Created by Lukas Rubikas on 14.10.8.
@@ -33,14 +33,14 @@ public class PackingService extends ServiceDecorator {
             case MEDIUM:
                 packageCost = 4.5;
                 break;
-            case BIG:
+            case LARGE:
                 packageCost = 7.99;
                 break;
-            case EXTRA_BIG:
+            case EXTRA_LARGE:
                 packageCost = 20.0;
                 break;
             default:
-                throw new RuntimeException("Should not be here");
+                packageCost = 0.0;
 
         }
 

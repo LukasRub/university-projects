@@ -4,7 +4,7 @@ import singleton.*;
 /**
  * Created by Lukas Rubikas on 14.10.8.
  */
-public class ProductService implements Service {
+public abstract class ProductService implements Service {
 
     private String productName;
     private double productPrice;
@@ -15,14 +15,9 @@ public class ProductService implements Service {
     }
 
     @Override
-    public String getDescription() {
-        return "Product " + this.productName + " was sold";
-    }
+    public abstract String getDescription();
 
     @Override
-    public double getCost() {
-        System.out.println(CurrencyExchangeSingleton.getInstance().getCurrencyExchangeRate());
-        return this.productPrice * CurrencyExchangeSingleton.getInstance().getCurrencyExchangeRate();
-    }
+    public abstract double getCost();
 
 }
